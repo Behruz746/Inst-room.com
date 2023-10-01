@@ -1,0 +1,218 @@
+.cards {
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid #d00;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    // border: 1px solid #d00;
+
+    .card__title {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; 
+    }
+}
+
+.card__btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 0;
+        outline: 0;
+        background-color: #fff;
+        cursor: pointer;
+        position: relative;
+
+        &:nth-child(2) {
+            transform: rotate(180deg);
+        }
+
+        svg {
+            width: 24px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.cards__container {
+    margin-top: 24px;
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    // border: 1px solid #d00;
+}
+
+.card {
+    max-width: 310px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #fff;
+    position: relative;
+}
+
+.card__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    a {
+        font-family: 'Raleway', sans-serif;
+        padding: 4px 6px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        color: #fff;
+        background: linear-gradient(0deg, #180A3E 0%, #180A3E 100%), #FFF;
+        transition: .1s linear;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+}
+
+.card__icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+}
+
+.card__img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.card__position {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    .span--active { // active bolganida span classiga qoshiladi
+        background-color: #FFB78B;
+    }
+
+    span {
+        display: block;
+        width: 68px;
+        height: 1.9px;
+        background-color: #DEDBDB;
+    }
+}
+
+.card__content {
+    margin-top: 14px;
+
+    h2 {
+        max-width: 230px;
+        width: 100%;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+    }
+}
+
+.card__price {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-right: 60px;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            color: #126935;
+        }
+    }
+}
+
+.price__text {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+
+    span {
+        margin-left: 10px;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: #DEDBDB;
+        text-decoration-line: strikethrough;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #DEDBDB;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.card__btn {
+    padding: 12px 14px;
+    border: 1px solid #F05A00;
+    background-color: #FFF;
+    outline: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 5px 0;
+}

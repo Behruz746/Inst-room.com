@@ -1,0 +1,172 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;  
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  max-width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #3B3B3B;  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FC573B;
+
+  &:hover {
+    background-color: #c55007;
+  }
+}
+
+body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background-color: #212526;
+  color: #fff;  
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1340px;
+  width: 100%;
+  padding: 0 20px;
+  // border: 1px solid #d00;
+  margin: 0 auto;
+  overflow: hidden; // vaqtinchalik
+}
+
+.app__main {
+  flex: 1 1 auto;
+}
+
+.outLine {
+  outline: 0;
+}
+
+.fontProsto {
+  font-family: 'Prosto One', cursive;
+}
+
+.fontRaleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.titleH1 {
+  font-size: 48px;
+}
+
+.titleH2 {
+  font-size: 32px;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
+.subtitleMini {
+  font-size: 20px;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.textBold {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.size-16 {
+  font-size: 16px;
+}
+
+.textChoice {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.textParagrafe {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.text {
+  font-weight: 16px;
+  font-weight: 500;
+}
+
+.textMini {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.textDescription {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.shape {
+  font-size: 12px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.py-20 {
+  margin: 20px auto;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.whiteColor {
+  color: #fff;
+}
+
+.blackColor {
+  color: #000;
+}
