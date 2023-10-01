@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import "./styles.scss";
+import "./Buttons.scss";
 
 import AppContext from "../../AppContext";
 
