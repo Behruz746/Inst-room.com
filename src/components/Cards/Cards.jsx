@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import "./styles.scss";
 
 export const SvgIcon = () => (
@@ -25,11 +24,12 @@ export const SvgIcon = () => (
   </>
 );
 
-function CardDouble() {
+function CardDouble(data) {
   return (
-    <div className="cards">
+    <div className="cards__block">
+      <h1>{data.text}</h1>
       <div className="card__header">
-        <h2 className="card__title fontProsto">Малярные товары</h2>
+        <h2 className="card__title fontProsto">{data.cardTitle}</h2>
         <div className="card__btns">
           <button className="btn__left">
             <SvgIcon />
@@ -42,14 +42,14 @@ function CardDouble() {
       <div className="cards__container">
         <div className="card">
           <div className="card__links">
-            <NavLink to="/">Новинка</NavLink>
+            <NavLink to={data.newsLink01}>Новинка</NavLink>
             <div className="card__icons">
               <img src="./images/bar-chart-2.svg" alt="card icon" />
               <img src="./images/heart.svg" alt="card icon" />
             </div>
           </div>
           <div className="card__img">
-            <img src="./images/Rectangle 20.png" alt="card images" />
+            <img src={data.cardImage01} alt="card images" />
           </div>
           <div className="card__position">
             <span></span>
@@ -58,10 +58,11 @@ function CardDouble() {
             <span></span>
           </div>
           <div className="card__content">
-            <h2>Эмаль Condor ПФ-115 жёлтая 1,8 кг</h2>
+            <h2>{data.cardDescription01}</h2>
             <div className="card__price">
               <h1 className="price__text">
-                500 ₽ <span>720 ₽</span>
+                {data.cardPrice01[0]}
+                <span>{data.cardPrice01[1]}</span>
               </h1>
               <div>
                 <img src="./images/check.svg" alt="card icon" />
@@ -75,14 +76,14 @@ function CardDouble() {
         </div>
         <div className="card">
           <div className="card__links">
-            <NavLink to="/">Новинка</NavLink>
+            <NavLink to={data.newsLink02}>Новинка</NavLink>
             <div className="card__icons">
               <img src="./images/bar-chart-2.svg" alt="card icon" />
               <img src="./images/heart.svg" alt="card icon" />
             </div>
           </div>
           <div className="card__img">
-            <img src="./images/Rectangle 20.png" alt="card images" />
+            <img src={data.cardImage02} alt="card images" />
           </div>
           <div className="card__position">
             <span></span>
@@ -91,10 +92,11 @@ function CardDouble() {
             <span></span>
           </div>
           <div className="card__content">
-            <h2>Эмаль Condor ПФ-115 жёлтая 1,8 кг</h2>
+            <h2>{data.cardDescription02}</h2>
             <div className="card__price">
               <h1 className="price__text">
-                500 ₽ <span>720 ₽</span>
+                {data.cardPrice02[0]}
+                <span>{data.cardPrice02[1]}</span>
               </h1>
               <div>
                 <img src="./images/check.svg" alt="card icon" />

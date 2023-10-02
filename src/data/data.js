@@ -6,7 +6,7 @@ export const dataNav = [
     id: 0,
   },
   {
-    pageLink: "/",
+    pageLink: "/", 
     icon: "./images/bar-chartIcon.svg",
     item: true,
     id: 1,

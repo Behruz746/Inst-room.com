@@ -1,4 +1,12 @@
-.cards {
+.cards__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // border: 1px solid #d00;
+    gap: 35px 18px;
+}
+
+.cards__block {
     max-width: 640px;
     width: 100%;
     display: flex;
@@ -34,6 +42,11 @@
         background-color: #fff;
         cursor: pointer;
         position: relative;
+        transition: .1s linear;
+
+        &:hover {
+            background-color: #f3ededd9;
+        }
 
         &:nth-child(2) {
             transform: rotate(180deg);

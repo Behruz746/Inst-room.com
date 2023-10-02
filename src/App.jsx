@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
   Route,
-  Outlet,
 } from "react-router-dom";
 
 // Pages
@@ -18,9 +17,26 @@ import AppContext from "./AppContext";
 
 // Laouts
 import RootLeyout from "./layout/RootLeyout";
+import axios from "axios";
 
 function App() {
   const [isData, setIsData] = useState("Hello Context");
+  const [cardData, setCardData] = useState([]);
+
+  
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await axios.get(
+          "https://651adc18340309952f0df4c9.mockapi.io/data"
+          );
+          setCardData(data.data);
+        } catch (error) {
+          console.log("error: 404", error);
+        }
+      }
+      fetchData()
+    }, []);
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -35,7 +51,7 @@ function App() {
   );
 
   return (
-    <AppContext.Provider value={{ isData }}>
+    <AppContext.Provider value={{ isData, cardData }}>
       <div className="App">
         <RouterProvider router={routes} />
       </div>
