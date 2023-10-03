@@ -144,3 +144,75 @@
     background-color: #F2F5F7FF;
     color: #000;
 }
+
+.ComponeySlider {
+    padding: 54px 0;
+
+    .container {
+        overflow: visible !important;
+    }
+
+    .slider__title {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .slick-prev {
+        left: -60px;
+
+        &::before {
+            content: url("images/card-arrow-left.svg") !important;
+        }
+    }
+
+    .slick-next {
+        transform: rotate(180deg) translateY(50%) !important;
+        right: -60px;
+
+        &::before {
+            content: url("images/card-arrow-left.svg") !important;
+        }
+    }
+
+    .variable-width {
+        margin-top: 28px;
+        display: flex !important;
+        width: 100% !important;
+        position: relative;
+
+        button {
+            position: absolute;
+            top: 50% !important;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: .1s linear;
+
+            &:hover {
+                background-color: #f3ededd9;
+            }
+        }   
+    }
+
+    .box {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 200px !important;
+        margin: 0 10px;
+        height: 78px;
+        background-color: #ffffff !important;
+        border-radius: 5px;
+        outline: 0;
+        border: 0;
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+}

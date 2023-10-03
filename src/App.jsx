@@ -22,8 +22,8 @@ import axios from "axios";
 function App() {
   const [isData, setIsData] = useState("Hello Context");
   const [cardData, setCardData] = useState([]);
+  const [isLoad, setIsLoad] = useState(false);
 
-  
   useEffect(() => {
     async function fetchData() {
       try {
@@ -31,7 +31,9 @@ function App() {
           "https://651adc18340309952f0df4c9.mockapi.io/data"
           );
           setCardData(data.data);
+          setIsLoad(true);
         } catch (error) {
+          setIsLoad(true);
           console.log("error: 404", error);
         }
       }
@@ -51,7 +53,7 @@ function App() {
   );
 
   return (
-    <AppContext.Provider value={{ isData, cardData }}>
+    <AppContext.Provider value={{ isData, cardData, isLoad }}>
       <div className="App">
         <RouterProvider router={routes} />
       </div>
