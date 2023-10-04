@@ -4,7 +4,7 @@ import "./Buttons.scss";
 
 import AppContext from "../../AppContext";
 
-function Buttons({ style, content }) {
+function Buttons({ style, content }) { 
   const { isData } = useContext(AppContext);
   return (
     <>

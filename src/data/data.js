@@ -1,24 +1,24 @@
 export const dataNav = [
   {
-    pageLink: "/",
+    pageLink: "*",
     icon: "./images/heartIcon.svg",
     item: true,
     id: 0,
   },
   {
-    pageLink: "/", 
+    pageLink: "*", 
     icon: "./images/bar-chartIcon.svg",
     item: true,
     id: 1,
   },
   {
-    pageLink: "/",
+    pageLink: "*",
     icon: "./images/userIcon.svg",
     item: false,
     id: 2,
   },
   {
-    pageLink: "/",
+    pageLink: "*",
     icon: "./images/shopping-cartIcon.svg",
     item: true,
     id: 3,
@@ -27,22 +27,22 @@ export const dataNav = [
 
 export const dataMenu = [
   {
-    pageLink: "/",
+    pageLink: "*",
     text: "О компании",
     id: 0,
   },
   {
-    pageLink: "/",
+    pageLink: "*",
     text: "Акции",
     id: 1,
   },
   {
-    pageLink: "/",
+    pageLink: "*",
     text: "Хиты сезона",
     id: 2,
   },
   {
-    pageLink: "/",
+    pageLink: "*",
     text: "Новинки",
     id: 3,
   },
@@ -68,22 +68,22 @@ export const dataLink = [
 
 export const dataList = [
   {
-    link: "/",
+    link: "*",
     text: "Малярные товары",
     id: 0,
   },
   {
-    link: "/",
+    link: "*",
     text: "Электрооборудование",
     id: 1,
   },
   {
-    link: "/",
+    link: "*",
     text: "Спецодежда",
     id: 2,
   },
   {
-    link: "/",
+    link: "*",
     text: "Для дома и дачи",
     id: 3,
   },
@@ -93,7 +93,7 @@ export const dataList = [
     id: 4,
   },
   {
-    link: "/",
+    link: "*",
     text: "Инструмент",
     id: 5,
   },
@@ -101,27 +101,27 @@ export const dataList = [
 
 export const dataListB = [
   {
-    link: "/",
+    link: "*",
     text: "О компании",
     id: 6,
   },
   {
-    link: "/",
+    link: "*",
     text: "Контакты",
     id: 7,
   },
   {
-    link: "/",
+    link: "*",
     text: "Новинки",
     id: 8,
   },
   {
-    link: "/",
+    link: "*",
     text: "Хиты сезона",
     id: 9,
   },
   {
-    link: "/",
+    link: "*",
     text: "Распродажи",
     id: 10,
   },

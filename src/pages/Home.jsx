@@ -7,6 +7,7 @@ import "./styles.scss";
 import ToolsNav from "../components/ToolsNav";
 import CardsCon from "../components/CardsCon";
 import ComponeySlider from "../components/ComponeySlider";
+import About from "../components/About";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <ToolsNav />
       <CardsCon />
       <ComponeySlider />
+      <About />
     </>
   );
 }
