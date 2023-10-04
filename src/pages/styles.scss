@@ -163,7 +163,7 @@
         left: -60px;
 
         &::before {
-            content: url("images/card-arrow-left.svg") !important;
+            content: url("../../public/images/card-arrow-left.svg") !important;
         }
     }
 
@@ -172,7 +172,7 @@
         right: -60px;
 
         &::before {
-            content: url("images/card-arrow-left.svg") !important;
+            content: url("../../public/images/card-arrow-left.svg") !important;
         }
     }
 
