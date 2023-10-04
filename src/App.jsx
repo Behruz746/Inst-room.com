@@ -22,23 +22,28 @@ import axios from "axios";
 function App() {
   const [isData, setIsData] = useState("Hello Context");
   const [cardData, setCardData] = useState([]);
+  const [cardOneData, setCardOneData] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
+
+  console.log(cardOneData);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await axios.get(
-          "https://651adc18340309952f0df4c9.mockapi.io/data"
-          );
-          setCardData(data.data);
-          setIsLoad(true);
-        } catch (error) {
-          setIsLoad(true);
-          console.log("error: 404", error);
-        }
+        const [dataCard, dataCardOne] = await Promise.all([
+          axios.get("https://651adc18340309952f0df4c9.mockapi.io/data"),
+          axios.get("https://651adc18340309952f0df4c9.mockapi.io/cardOne"),
+        ]);
+        setCardData(dataCard.data);
+        setCardOneData(dataCardOne.data);
+        setIsLoad(true);
+      } catch (error) {
+        setIsLoad(true);
+        console.log("error: 404", error);
       }
-      fetchData()
-    }, []);
+    }
+    fetchData();
+  }, []);
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -46,14 +51,14 @@ function App() {
         <Route index element={<Home />} />
         <Route path="catalog" element={<Catalog />} />
 
-        {/* Error page: 404 */}
+        {/* Error page: 404 :(+ */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )
   );
 
   return (
-    <AppContext.Provider value={{ isData, cardData, isLoad }}>
+    <AppContext.Provider value={{ isData, cardData, cardOneData, isLoad }}>
       <div className="App">
         <RouterProvider router={routes} />
       </div>

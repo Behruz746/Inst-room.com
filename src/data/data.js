@@ -6,7 +6,7 @@ export const dataNav = [
     id: 0,
   },
   {
-    pageLink: "*", 
+    pageLink: "*",
     icon: "./images/bar-chartIcon.svg",
     item: true,
     id: 1,
@@ -124,5 +124,18 @@ export const dataListB = [
     link: "*",
     text: "Распродажи",
     id: 10,
+  },
+];
+
+const cardOne = [
+  {
+    image: "./images/cardImg01.png",
+    title: "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+    price: ["500 ₽", "720 ₽"],
+  },
+  {
+    image: "./images/cardImg02.png",
+    title: "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+    price: ["500 ₽", "720 ₽"],
   },
 ];

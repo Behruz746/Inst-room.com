@@ -24,7 +24,7 @@ export const SvgIcon = () => (
   </>
 );
 
-function CardDouble(data) {
+export function CardDouble(data) {
   return (
     <div className="cards__block">
       <h1>{data.text}</h1>
@@ -113,4 +113,45 @@ function CardDouble(data) {
   );
 }
 
-export default CardDouble;
+export function CardOne(data) {
+    console.log(data);
+
+  return (
+    <>
+      <div className="card blackColor">
+        <div className="card__links">
+          <NavLink to={data.link}>Новинка</NavLink>
+          <div className="card__icons">
+            <img src="./images/bar-chart-2.svg" alt="card icon" />
+            <img src="./images/heart.svg" alt="card icon" />
+          </div>
+        </div>
+        <div className="card__img">
+          <img src={data.image} alt="card images" />
+        </div>
+        <div className="card__position">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className="card__content">
+          <h2>{data.title}</h2>
+          <div className="card__price">
+            <h1 className="price__text">
+              {data.price[0]}
+              <span>{data.price[1]}</span>
+            </h1>
+            <div>
+              <img src="./images/check.svg" alt="card icon" />
+              <p>в наличии</p>
+            </div>
+            <button className="card__btn">
+              <img src="./images/shopping-cart.svg" alt="card icon" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

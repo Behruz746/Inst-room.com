@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import ContentLoader from "react-content-loader";
 
-import CardDouble from "./Cards/Cards";
+import { CardDouble } from "./Cards/Cards";
 import AppContext from "../AppContext";
 
 const MyLoader = (props) => {
