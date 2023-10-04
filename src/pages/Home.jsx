@@ -5,7 +5,7 @@ import "./styles.scss";
 
 // Components
 import ToolsNav from "../components/ToolsNav";
-import CardsCon from "../components/cardsCon";
+import CardsCon from "../components/CardsCon";
 import ComponeySlider from "../components/ComponeySlider";
 
 function Home() {
