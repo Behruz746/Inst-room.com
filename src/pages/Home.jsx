@@ -9,6 +9,7 @@ import CardsCon from "../components/CardsCon";
 import ComponeySlider from "../components/ComponeySlider";
 import About from "../components/About";
 import SliderGoods from "../components/SliderGoods";
+import NewsHome from "../components/NewsHome";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <ComponeySlider />
       <About />
       <SliderGoods />
+      <NewsHome />
     </>
   );
 }

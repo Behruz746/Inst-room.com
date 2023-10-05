@@ -123,6 +123,14 @@
     align-items: center;
     justify-content: center;
     margin-top: 4px;
+    overflow: hidden;
+     
+    img {
+        width: auto !important;
+        height: 190px;
+        object-fit: contain;
+        object-position: center;
+    }
 }
 
 .card__position {

@@ -114,8 +114,6 @@ export function CardDouble(data) {
 }
 
 export function CardOne(data) {
-    console.log(data);
-
   return (
     <>
       <div className="card blackColor">

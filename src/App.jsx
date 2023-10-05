@@ -24,15 +24,16 @@ function App() {
   const [cardData, setCardData] = useState([]);
   const [cardOneData, setCardOneData] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
+  const [isUrl, setIsUrl] = useState("https://651adc18340309952f0df4c9.mockapi.io/cardOne");
 
-  console.log(cardOneData);
+  console.log(isUrl);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const [dataCard, dataCardOne] = await Promise.all([
           axios.get("https://651adc18340309952f0df4c9.mockapi.io/data"),
-          axios.get("https://651adc18340309952f0df4c9.mockapi.io/cardOne"),
+          axios.get(isUrl),
         ]);
         setCardData(dataCard.data);
         setCardOneData(dataCardOne.data);
@@ -43,7 +44,7 @@ function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [isUrl]);
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -58,7 +59,7 @@ function App() {
   );
 
   return (
-    <AppContext.Provider value={{ isData, cardData, cardOneData, isLoad }}>
+    <AppContext.Provider value={{ isData, cardData, cardOneData, isLoad, setIsUrl }}>
       <div className="App">
         <RouterProvider router={routes} />
       </div>

@@ -274,7 +274,7 @@
         background-color: #FFF;
         outline: 0;
         position: absolute;
-        transform: translateY(115px) !important;
+        transform: translateY(117px) !important;
         right: 0 !important;
         cursor: pointer;
         border-radius: 5px 0 !important;
@@ -386,4 +386,97 @@
     display: flex;
     align-items: center;
     gap: 60px;
+
+    li {
+        display: block;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: #212526;
+        cursor: pointer;
+    }
+
+    .item--active {
+        color: #fff;
+    }
+}
+
+.NewsHome {
+    margin-top: 52px;
+    padding: 80px 0;
+    background-color: #F2F5F7;
+    color: #000;
+}
+
+.NewsHome__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.NewsHome__content {
+    max-width: 388px;
+    width: 100%;
+
+    h1 {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 106.667% */
+    }
+
+    p {
+        margin-top: 24px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+
+    button {
+        margin-top: 40px;
+        max-width: 250px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 125% */
+    }
+}
+
+.NewsHome__cadrs {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 16px 20px;
+    flex-wrap: wrap;
+
+    .NewsHome__card {
+        max-width: 420px;
+        width: 100%;
+        
+        img {
+            max-width: 420px;
+            width: 100%;
+            height: auto;
+        }
+    }   
+    
+    h3 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 120% */
+    }
+
+    p {
+        margin-top: 4px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 125% */
+    }
 }
