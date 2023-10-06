@@ -24,7 +24,9 @@ function App() {
   const [cardData, setCardData] = useState([]);
   const [cardOneData, setCardOneData] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
-  const [isUrl, setIsUrl] = useState("https://651adc18340309952f0df4c9.mockapi.io/cardOne");
+  const [isUrl, setIsUrl] = useState(
+    "https://651adc18340309952f0df4c9.mockapi.io/cardOne"
+  );
 
   console.log(isUrl);
 
@@ -39,11 +41,12 @@ function App() {
         setCardOneData(dataCardOne.data);
         setIsLoad(true);
       } catch (error) {
-        setIsLoad(true);
+        // setIsLoad(true);
         console.log("error: 404", error);
       }
     }
     fetchData();
+    setIsLoad(false); // sliderni almashtirishganida animation bolishi uchun
   }, [isUrl]);
 
   const routes = createBrowserRouter(
@@ -59,7 +62,9 @@ function App() {
   );
 
   return (
-    <AppContext.Provider value={{ isData, cardData, cardOneData, isLoad, setIsUrl }}>
+    <AppContext.Provider
+      value={{ isData, cardData, cardOneData, isLoad, setIsUrl, isUrl }}
+    >
       <div className="App">
         <RouterProvider router={routes} />
       </div>

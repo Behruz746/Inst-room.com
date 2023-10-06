@@ -1,14 +1,15 @@
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import ContentLoader from "react-content-loader";
 
 // Compoenets
 import { CardOne } from "./Cards/Cards";
 import AppContext from "../AppContext";
 
 function SliderGoods() {
-  const { cardOneData, setIsUrl } = useContext(AppContext);
+  const { cardOneData, setIsUrl, isLoad, isUrl } = useContext(AppContext);
 
   useEffect(() => {
     const sectionList = document.querySelectorAll(".goods__list li");
@@ -19,7 +20,7 @@ function SliderGoods() {
         }
         sectionList[i].classList.add("item--active");
 
-        if(i === 0) {
+        if (i === 0) {
           setIsUrl("https://651adc18340309952f0df4c9.mockapi.io/cardOne");
         } else if (i === 1) {
           setIsUrl("https://651ed87344a3a8aa476919b4.mockapi.io/acsiya");
@@ -53,11 +54,23 @@ function SliderGoods() {
         </div>
       </div>
       <div className="container py-20">
-        <Slider {...settings}>
-          {cardOneData.map((data) => (
-            <CardOne {...data} key={uuidv4()} />
-          ))}
-        </Slider>
+        {isLoad ? (
+          <Slider {...settings}>
+            {cardOneData.map((data) => (
+              <CardOne {...data} key={uuidv4()} />
+            ))}
+          </Slider>
+        ) : (
+          <div className="animation__container">
+            <div className="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        )}
+
         <NavLink className="goods__link fontRaleway" to="*">
           Смотреть все
         </NavLink>

@@ -2,6 +2,23 @@
     background-color: #000;
 }
 
+.CatalogGoods {
+    position: relative;
+}
+
+.catalog__container {
+    padding: 0 20px;
+    max-width: 1300px;
+    width: 100%;
+    height: 200px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 5;
+    background-color: #fff;
+}
+
 .headerT__container, .headerB__container {
     display: flex;
     align-items: center;
