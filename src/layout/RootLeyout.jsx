@@ -16,7 +16,7 @@ function RootLeyout() {
   return (
     <>
       <Header />
-      <CatalogGoods />
+      {/* <CatalogGoods /> */}
       <main className="app__main">
         <Outlet />
       </main>
