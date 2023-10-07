@@ -127,15 +127,29 @@ export const dataListB = [
   },
 ];
 
-const cardOne = [
+export const headerListData = [
   {
-    image: "./images/cardImg01.png",
-    title: "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
-    price: ["500 ₽", "720 ₽"],
+    text: "Малярные товары",
+    id: 0,
   },
   {
-    image: "./images/cardImg02.png",
-    title: "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
-    price: ["500 ₽", "720 ₽"],
+    text: "Электроинструмент",
+    id: 1,
+  },
+  {
+    text: "Спецодежда",
+    id: 2,
+  },
+  {
+    text: "Сезонное",
+    id: 3,
+  },
+  {
+    text: "Для дома и дачи",
+    id: 4,
+  },
+  {
+    text: "Инструменты",
+    id: 5,
   },
 ];

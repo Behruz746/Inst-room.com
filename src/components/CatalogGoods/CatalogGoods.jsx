@@ -1,4 +1,9 @@
+import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./styles.scss";
+
+import { headerListData } from "../../data/data";
+import { NavLink } from "react-router-dom";
 
 const MySvg = () => (
   <svg
@@ -13,45 +18,63 @@ const MySvg = () => (
         id="Vector"
         d="M15 19L8 12L15 5"
         stroke="#000"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
   </svg>
 );
 
-const CatalogGoods = () => (
-  <div className="CatalogGoods blackColor">
-    <div className="catalog__container">
-      <ul className="catalog__list fontProsto">
-        <li className="catalog__item">
-          <h3>Малярные товары</h3>
-          <MySvg />
-        </li>
-        <li className="catalog__item">
-          <h3>Электроинструмент</h3>
-          <MySvg />
-        </li>
-        <li className="catalog__item">
-          <h3>Спецодежда</h3>
-          <MySvg />
-        </li>
-        <li className="catalog__item">
-          <h3>Сезонное</h3>
-          <MySvg />
-        </li>
-        <li className="catalog__item">
-          <h3>Для дома и дачи</h3>
-          <MySvg />
-        </li>
-        <li className="catalog__item">
-          <h3>Инструменты</h3>
-          <MySvg />
-        </li>
-      </ul>
+const CatalogGoods = ({ setListTiggle }) => {
+  const [isToggle, setIsToggle] = useState(false);
+  // const [isIndex, setIsIndex] = useState([]);
+  console.log(isToggle);
+
+  useEffect(() => {
+    const items = document.querySelectorAll(".catalog__list li");
+    items.forEach((item, index) =>
+      item.addEventListener("click", () => {
+        console.log(item.textContent, index);
+        setIsToggle(true);
+
+        console.log(isToggle);
+      })
+    );
+
+    window.addEventListener("scroll", () => {
+      setListTiggle(false);
+    });
+  }, []);
+
+  return (
+    <div className="CatalogGoods blackColor">
+      <div className="catalog__container">
+        <ul className="catalog__list fontProsto">
+          {headerListData.map((data) => {
+            return (
+              <li className="catalog__item" key={uuidv4()}>
+                <h3>{data.text}</h3>
+                <MySvg />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      {isToggle && (
+        <div className="list__data blackColor">
+          <ul className="flex f-column">
+            {headerListData.map((data) => (
+              <NavLink to={data.link} key={uuidv4()}>
+                <li>{data.text}</li>
+              </NavLink>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 export default CatalogGoods;

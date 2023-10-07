@@ -1,10 +1,12 @@
 import "./Header.scss";
-
 import { MainMenu, MenuLast, Links } from "../MainMenu/MainMenu";
 import { dataNav, dataMenu, dataLink } from "../../data/data";
 import CatalogGoods from "../CatalogGoods/CatalogGoods";
+import { useState } from "react";
 
-function Header() { 
+function Header() {
+  const [listToggle, setListTiggle] = useState(false);
+
   return (
     <>
       <header className="Header">
@@ -40,7 +42,12 @@ function Header() {
         <div className="HeaderBottom">
           <div className="container">
             <div className="headerB__container">
-              <button className="header__btn">
+              <button
+                className="header__btn"
+                onClick={() =>
+                  listToggle ? setListTiggle(false) : setListTiggle(true)
+                }
+              >
                 <img src="./images/menuIcon.svg" alt="menu icon" />
                 <h2 className="fontRaleway whiteColor text">Каталог товаров</h2>
               </button>
@@ -62,7 +69,7 @@ function Header() {
                 <input type="text" placeholder="Поиск по каталогу" />
               </div>
 
-              <CatalogGoods />
+              {listToggle && <CatalogGoods setListTiggle={setListTiggle } />}
             </div>
           </div>
         </div>

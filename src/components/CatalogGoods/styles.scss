@@ -1,17 +1,55 @@
 .CatalogGoods {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
    width: 100%;
 //    border: 1px solid #d00;
    position: absolute;
    top: 98px;
    left: 0;
-   transform: translateX(-0%);
-   z-index: 5;
+//    transform: translateY(-200%);
+   z-index: 100;
 }
 
 .catalog__container {
     max-width: 310px;
     width: 100%;
     background-color: #fff;
+}
+
+.list__data {
+    padding: 32px 52px;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    // height: 484px;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.10);
+
+    ul {
+        display: grid;
+        // flex-wrap: wrap;
+        // flex-direction: column;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        border: 1px solid #d00;
+    }
+    
+    li {
+        border: 1px solid #d00;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 125% */
+        color: #000;
+        cursor: pointer;
+        transition: .2s linear;
+
+        &:hover {
+            color: #F05A00;
+        }
+    }
 }
 
 .catalog__list {
