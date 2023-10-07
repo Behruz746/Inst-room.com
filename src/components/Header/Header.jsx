@@ -2,8 +2,9 @@ import "./Header.scss";
 
 import { MainMenu, MenuLast, Links } from "../MainMenu/MainMenu";
 import { dataNav, dataMenu, dataLink } from "../../data/data";
+import CatalogGoods from "../CatalogGoods/CatalogGoods";
 
-function Header() {
+function Header() { 
   return (
     <>
       <header className="Header">
@@ -60,6 +61,8 @@ function Header() {
                 <img src="./images/search.svg" alt="search icon" />
                 <input type="text" placeholder="Поиск по каталогу" />
               </div>
+
+              <CatalogGoods />
             </div>
           </div>
         </div>
