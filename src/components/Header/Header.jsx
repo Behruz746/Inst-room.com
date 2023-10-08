@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function Header() {
   const [listToggle, setListTiggle] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
 
   return (
     <>
@@ -44,9 +45,10 @@ function Header() {
             <div className="headerB__container">
               <button
                 className="header__btn"
-                onClick={() =>
-                  listToggle ? setListTiggle(false) : setListTiggle(true)
-                }
+                onClick={() => {
+                  setListTiggle(!listToggle);
+                  setIsToggle(false);
+                }}
               >
                 <img src="./images/menuIcon.svg" alt="menu icon" />
                 <h2 className="fontRaleway whiteColor text">Каталог товаров</h2>
@@ -69,7 +71,12 @@ function Header() {
                 <input type="text" placeholder="Поиск по каталогу" />
               </div>
 
-              {listToggle && <CatalogGoods setListTiggle={setListTiggle } />}
+              <CatalogGoods
+                setListTiggle={setListTiggle}
+                listToggle={listToggle}
+                isToggle={isToggle}
+                setIsToggle={setIsToggle}
+              />
             </div>
           </div>
         </div>
